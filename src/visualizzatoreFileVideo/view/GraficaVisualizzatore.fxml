@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visualizzatoreFileVideo.controller.MedioPlayerController">
+   <children>
+      <ImageView fx:id="backgroundImage" fitHeight="400.0" fitWidth="600.0" />
+      <BorderPane fx:id="borderPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar style="-fx-background-color: white; -fx-border-color: black;" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem fx:id="openMenuItem" mnemonicParsing="false" onAction="#openMenuItemClick" text="Open" />
+                        <CheckMenuItem fx:id="songsPlaylistCheckMenuItem" mnemonicParsing="false" onAction="#songsPlaylistCheckMenuItemValidation" text="Media's list" />
+                        <MenuItem fx:id="logoutMenuItem" mnemonicParsing="false" onAction="#logoutMenuItemClick" text="Logout" />
+                     </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <MenuItem fx:id="minePlaylistsMenuItem" mnemonicParsing="false" onAction="#minePlaylistsMenuItemClick" text="Mine playlists" />
+                        <MenuItem fx:id="deleteAccountMenuItem" mnemonicParsing="false" onAction="#deleteAccountMenuItemClick" text="Delete account" />
+                     </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#aboutMenuItemClick" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="50.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Slider fx:id="sliderH" showTickLabels="true" />
+                        <HBox alignment="TOP_CENTER" prefHeight="165.0" prefWidth="600.0">
+                           <children>
+                              <Button fx:id="backSecButton" mnemonicParsing="false" onAction="#backSecButtonClick" style="-fx-background-color: transparent;">
+                                 <HBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </HBox.margin></Button>
+                              <Button fx:id="precButton" mnemonicParsing="false" onAction="#precButtonClick" style="-fx-background-color: transparent;">
+                                 <HBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="playButton" mnemonicParsing="false" onAction="#playButtonClick" style="-fx-background-color: transparent;">
+                                 <HBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="succButton" mnemonicParsing="false" onAction="#succButtonClick" style="-fx-background-color: transparent;">
+                                 <HBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="aheadSecButton" mnemonicParsing="false" onAction="#aheadSecButtonClick" style="-fx-background-color: transparent;">
+                                 <HBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </HBox.margin></Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <MediaView fx:id="mv" BorderPane.alignment="CENTER">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </MediaView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
