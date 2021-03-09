@@ -1,6 +1,6 @@
 Project's properties - add Jar - select the lib folder and then apply and close.
 This is university's project.  This application can reproduce MP4 and MP3 files, 
-create an account where  you will save your playlists or open a single media; 
+create an account where  you will save your playlists or open single media; 
 you can also edit or sort playlists by name or category. Double click on the 
 playlist that you want to reproduce and it will. There's also an option that 
 you can validate to see the media's list in reproduction. 
