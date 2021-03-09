@@ -10,7 +10,7 @@ you change media and return to the other, the speed is changed, i think depend o
 javafx.scene.control.Slider, if you eliminate that component all is good. 
 Anyway is a good example to see how a Media Player work. Enjoy. 
 
-All images are taken from:
+I took all images from:
 www.icons8.it
 https://it.freepik.com/
 other random sites on google
