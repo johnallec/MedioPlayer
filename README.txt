@@ -10,11 +10,6 @@ you change media and return to the other, the speed is changed, i think depend o
 javafx.scene.control.Slider, if you eliminate that component all is good. 
 Anyway is a good example to see how a Media Player work. Enjoy. 
 
-You have to import 2 jars (in "lib" folder)
-There are 2 directories ("MP3 FILE", "MP4 FILES") to simplify the adding test 
-playlist's elements.
-
-
 All images are taken from:
 www.icons8.it
 https://it.freepik.com/
