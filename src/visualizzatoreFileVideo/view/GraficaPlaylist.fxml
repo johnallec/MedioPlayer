@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visualizzatoreFileVideo.controller.PlaylistController">
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Tool">
+                  <items>
+                        <MenuItem fx:id="addPlaylistMenuItem" mnemonicParsing="false" onAction="#addPlaylistMenuItemClick" text="Add playlist" />
+                        <Menu mnemonicParsing="false" text="Sort for..">
+                           <items>
+                              <CheckMenuItem fx:id="categoryCheckMenuItem" mnemonicParsing="false" onAction="#categoryCheckMenuItemValidation" text="Category" />
+                              <CheckMenuItem fx:id="nameCheckMenuItem" mnemonicParsing="false" onAction="#nameCheckMenuItemValidation" text="Name" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="editPlaylistMenu" mnemonicParsing="false" text="Edit playlist" />
+                        <MenuItem fx:id="retryMenuItem" mnemonicParsing="false" onAction="#retryMenuItemClick" text="Back" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <left>
+                  <ScrollPane prefHeight="373.0" prefWidth="296.0" BorderPane.alignment="CENTER">
+                     <content>
+                        <VBox fx:id="playlistsVbox" />
+                     </content>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </ScrollPane>
+               </left>
+               <center>
+                  <ScrollPane prefHeight="373.0" prefWidth="296.0" BorderPane.alignment="CENTER">
+                     <content>
+                        <FlowPane fx:id="flowPaneListSongs" nodeOrientation="LEFT_TO_RIGHT" rowValignment="TOP" />
+                     </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

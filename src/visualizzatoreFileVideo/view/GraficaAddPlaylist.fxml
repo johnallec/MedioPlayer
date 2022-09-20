@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visualizzatoreFileVideo.controller.AddPlaylistController">
+   <children>
+      <ImageView fx:id="backgroundImage" fitHeight="600.0" fitWidth="800.0" />
+      <BorderPane layoutX="151.0" layoutY="73.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="playlistNameTextField" promptText="Playlist's name.." style="-fx-background-color: white; -fx-border-color: black;" text="Playlist's name..">
+                     <HBox.margin>
+                        <Insets left="100.0" right="10.0" top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="genereTextField" promptText="Category's playlist.." style="-fx-background-color: white; -fx-border-color: black;" text="Category's playlist">
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin></TextField>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="311.0" prefWidth="60.0">
+                     <children>
+                        <Button fx:id="chooseSongButton" mnemonicParsing="false" onAction="#chooseSongButtonClick" style="-fx-background-color: transparent;">
+                           <VBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeButtonClick" style="-fx-background-color: transparent;">
+                           <VBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <ListView fx:id="listView" prefHeight="311.0" prefWidth="240.0" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="40.0" left="100.0" />
+               </BorderPane.margin>
+            </HBox>
+         </center>
+         <left>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="choosePlaylistCoverButton" mnemonicParsing="false" onAction="#choosePlaylistCoverButtonClick" style="-fx-background-color: white; -fx-border-color: black;" text="Choose playlist's cover" />
+                  <ImageView fx:id="coverImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="createButton" mnemonicParsing="false" onAction="#createButtonClick" style="-fx-background-color: white; -fx-border-color: black;" text="Save">
+                           <HBox.margin>
+                              <Insets bottom="12.0" left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="retryButton" mnemonicParsing="false" onAction="#retryButtonClick" style="-fx-background-color: white; -fx-border-color: black;" text="Back">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="100.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
